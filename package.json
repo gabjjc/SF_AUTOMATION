@@ -1,0 +1,25 @@
+{
+  "name": "salesforce-e2e-tests",
+  "version": "1.0.0",
+  "description": "Pruebas E2E de regresión para Salesforce con UTAM + WebdriverIO",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "compile": "utam -c utam.config.js",
+    "test": "wdio run wdio.conf.js",
+    "test:compile-and-run": "npm run compile && npm run test"
+  },
+  "devDependencies": {
+    "@wdio/cli": "^9.0.0",
+    "@wdio/local-runner": "^9.0.0",
+    "@wdio/mocha-framework": "^9.0.0",
+    "@wdio/spec-reporter": "^9.0.0",
+    "wdio-chromedriver-service": "^8.1.1",
+    "wdio-utam-service": "3.3.0",
+    "utam": "3.3.0",
+    "salesforce-pageobjects": "latest",
+    "dotenv": "^16.4.0",
+    "chromedriver": "^147.0.0"
+  }
+}
